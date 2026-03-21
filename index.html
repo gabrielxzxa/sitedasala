@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>DS1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="inicio">
+   
+</header>
+
+<nav>
+    <a href="index.html">CAMISETA</a>
+    <a href="rifa.html">RIFA</a>
+</nav>
+
+<section class="hero">
+    
+    <div class="hero-texto">
+        <h1>Sua camiseta perfeita está aqui</h1>
+        <p>Estilo, conforto e qualidade em um só produto.</p>
+        <a href="https://wa.me/5519992230795" class="btn">Comprar agora</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="camisa1.png" alt="camiseta">
+    </div>
+
+</section>
+
+<script>
+window.addEventListener("scroll", function() {
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY > 50) {
+        nav.classList.add("ativo");
+    } else {
+        nav.classList.remove("ativo");
+    }
+});
+</script>
+
+</body>
+</html>
