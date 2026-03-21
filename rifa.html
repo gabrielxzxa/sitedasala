@@ -13,11 +13,34 @@
     <a href="index.html">CAMISETA</a>
     <a href="rifa.html">RIFA</a>
 </nav>
-
-<section>
+<main>
+    <section>
     <h1>Sobre</h1>
     <p>Essa é a página sobre o meu site.</p>
 </section>
+</main>
+
+
+<script>
+window.addEventListener("scroll", function() {
+    const nav = document.querySelector("nav");
+
+    if (window.scrollY > 50) {
+        nav.classList.add("ativo");
+    } else {
+        nav.classList.remove("ativo");
+    }
+});
+</script>
+
+         <footer>
+    <p>
+       desenvolvido por souza 
+        <a href="https://instagram.com/2k_souza" target="_blank">
+           @2k_souza
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>
