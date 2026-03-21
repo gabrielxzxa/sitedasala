@@ -201,3 +201,55 @@ body {
 main {
     flex: 1;
 }
+
+.hero {
+    padding: 80px 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .hero-texto {
+        text-align: center;
+    }
+
+    .hero-texto h1 {
+        font-size: 28px;
+    }
+
+    .hero-texto p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .imagem img {
+        width: 100%;
+    }
+
+}
