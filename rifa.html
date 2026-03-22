@@ -5,42 +5,56 @@
     <title>DS1</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">CAMISETA</a>
+        <a href="rifa.html">RIFA</a>
+    </nav>
 
-<nav>
-    <a href="index.html">CAMISETA</a>
-    <a href="rifa.html">RIFA</a>
-</nav>
-<main>
-    <section>
-    <h1>COMPRE SUA RIFA AQUI</h1>
-</section>
+      
+
+   
+    <!-- Main content -->
+ <main class="main-content rifa-page">
+    <section class="intro">
+        <h1>Compre sua rifa aqui</h1>
+    </section>
+
+    <section class="white-section rifas">
+        <img src="rifa1.jpeg" width="300px" alt ="Rifa 1" class="foto">
+        <img src="rifa2.jpeg" width="300px" alt="Rifa 2" class="foto">
+    </section>
+
+    <!-- Botão separado -->
+    <section class="button-section">
+        <a href="https://wa.me/5519992230795" class="btn-comprar">Comprar agora</a>
+    </section>
 </main>
 
+        <!-- Botão -->
+          
 
-<script>
-window.addEventListener("scroll", function() {
-    const nav = document.querySelector("nav");
+    <!-- Footer -->
+    <footer>
+        <p>
+            Desenvolvido por Souza 
+            <a href="https://instagram.com/2k_s0uza" target="_blank">@2k_s0uza</a>
+        </p>
+    </footer>
 
-    if (window.scrollY > 50) {
-        nav.classList.add("ativo");
-    } else {
-        nav.classList.remove("ativo");
-    }
-});
-</script>
-
-         <footer>
-    <p>
-       desenvolvido por souza 
-        <a href="https://instagram.com/2k_s0uza" target="_blank">
-           @2k_s0uza
-        </a>
-    </p>
-</footer>
-
+    <!-- Script Navbar -->
+    <script>
+        window.addEventListener("scroll", function() {
+            const nav = document.querySelector("nav");
+            if (window.scrollY > 50) {
+                nav.classList.add("ativo");
+            } else {
+                nav.classList.remove("ativo");
+            }
+        });
+    </script>
 </body>
 </html>
