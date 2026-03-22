@@ -223,31 +223,115 @@ footer a:hover, footer b:hover {
     }
 }
 
+/* ===== WHITE SECTION / IMAGENS E BOTÃO ===== */
+.rifa-page .main-content {
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 20px 40px; /* topo maior para navbar fixa */
+    gap: 30px; /* espaço entre seções */
+}
+
+.rifa-page .white-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* empilha imagens e botão */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Fotos da rifa */
+.rifa-page .rifas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.rifa-page .rifas .foto {
+    width: 200px;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Botão abaixo das imagens */
+.rifa-page .button-section {
+    margin-top: 20px; /* distância das imagens */
+    display: flex;
+    justify-content: center; /* centraliza botão horizontalmente */
+    width: 100%;
+}
+
+.rifa-page .btn-comprar {
+    background-color: #7b3fe4;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rifa-page .btn-comprar:hover {
+    background-color: #5e2dbd;
+}
+
+.white-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* empilha imagens → botão */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .rifas {
     display: flex;
-    justify-content: center; /* centraliza as imagens horizontalmente */
-    gap: 20px; /* espaço entre as imagens */
-    margin-bottom: 20px; /* espaço entre as rifas e o botão */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rifas .foto {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.button-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* centraliza botão horizontalmente */
+    width: 100%;
 }
 
 .btn-comprar {
-    display: block;
-    margin: 0 auto; /* centraliza o botão */
-    background-color: #7b3fe4; /* cor roxa do botão */
+    background-color: #7b3fe4;
     color: white;
-    border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 16px;
+    transition: 0.3s;
 }
 
 .btn-comprar:hover {
-    background-color: #5e2dbd; /* muda cor quando passa o mouse */
-}
-
-/* Apenas para a página de rifa */
-.rifa-page .button-section {
-    margin-top: 20px;
-    text-align: center;
+    background-color: #5e2dbd;
 }
