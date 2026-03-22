@@ -1,36 +1,339 @@
-/* Original CSS styles restored */
-
-header {
-    /* Header styles go here */
+/* GERAL */
+html {
+    scroll-behavior: smooth;
 }
 
-.navbar {
-    /* Navbar styles go here */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* organiza tudo em coluna */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    background: linear-gradient(to bottom, #8a2be2, #4b0082, #111);
+    color: white;
 }
 
+/* HEADER / NAVBAR */
+nav {
+   background-color: transparent; /* cor de fundo do header */
+    position:fixed;
+    top: 0;
+    width:100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+nav.ativo {
+    background-color: transparent /* cor de fundo do header */
+;
+    padding: 5px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #8a2be2;
+}
+
+/* HERO */
 .hero {
-    /* Hero section styles go here */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 20px;
+    min-height: 90vh;
 }
 
-button {
-    /* Button styles go here */
+.hero-texto {
+    max-width: 400px;
+    text-align: left;
 }
 
+.hero-texto h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.btn {
+    background-color: #8a2be2;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6a0dad;
+}
+
+/* HERO IMAGEM */
+.hero-img img {
+    width: 500px;
+    max-width: 100%;
+}
+
+/* SEÇÕES */
+section {
+    padding: 40px;
+}
+
+/* SEÇÃO ANTIGA / PRO */
+.secao-pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.texto h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.texto p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.imagem img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.insta-link {
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.insta-link a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.insta-link a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN CONTENT - DIV BRANCA COM FOTOS */
+.main-content {
+    flex: 1; /* empurra o footer pra baixo */
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    padding: 40px 20px;
+}
+
+.white-section {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.foto {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* FOOTER */
 footer {
-    /* Footer styles go here */
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
 }
 
-/* Mobile fixes for .rifa-page */
+footer a, footer b {
+    color: #ff00cc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover, footer b:hover {
+    color: white;
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    .rifa-page .rifas {
-        display: flex;
+    .hero {
         flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        min-height: auto;
     }
-    .rifa-page img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain; /* Ensures images are properly sized without stretching */
+
+    .hero-texto {
+        text-align: center;
     }
+
+    .hero-texto h1 {
+        font-size: 28px;
+    }
+
+    .hero-texto p {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .imagem img {
+        width: 100%;
+    }
+
+    .white-section {
+        flex-direction: display; /* fotos uma embaixo da outra no celular */
+    }
+}
+
+/* ===== WHITE SECTION / IMAGENS E BOTÃO ===== */
+.rifa-page .main-content {
+    display: flex;
+    flex-direction: flex; /* empilha verticalmente */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 20px 40px; /* topo maior para navbar fixa */
+    gap: 30px; /* espaço entre seções */
+}
+
+.rifa-page .white-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* empilha imagens e botão */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Fotos da rifa */
+.rifa-page .rifas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.rifa-page .rifas .foto {
+    width: 200px;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Botão abaixo das imagens */
+.rifa-page .button-section {
+    margin-top: 20px; /* distância das imagens */
+    display: flex;
+    justify-content: center; /* centraliza botão horizontalmente */
+    width: 100%;
+}
+
+.rifa-page .btn-comprar {
+    background-color: #7b3fe4;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rifa-page .btn-comprar:hover {
+    background-color: #5e2dbd;
+}
+
+.white-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* empilha imagens → botão */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rifas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rifas .foto {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.button-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* centraliza botão horizontalmente */
+    width: 100%;
+}
+
+.btn-comprar {
+    background-color: #7b3fe4;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #5e2dbd;
 }
