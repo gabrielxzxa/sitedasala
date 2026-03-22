@@ -18,10 +18,10 @@ body {
 
 /* HEADER / NAVBAR */
 nav {
-   background-color: #000000; /* cor de fundo do header */
+   background-color: transparent /* cor de fundo do header */
     position:fixed;
     top: 0;
-    width: 100%;
+    width:100%;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -30,7 +30,8 @@ nav {
 }
 
 nav.ativo {
-    background-color: rgba(0,0,0,0.85);
+    background-color: transparent /* cor de fundo do header */
+;
     padding: 5px;
 }
 
