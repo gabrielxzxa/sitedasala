@@ -24,11 +24,6 @@ body {
 
 /* NAVBAR */
 nav {
-    
-    background-color: transparent;
-    padding: 10px;
-   
-
     position: fixed;
     top: 0;
     width: 100%;
@@ -253,4 +248,3 @@ main {
     }
 
 }
-
