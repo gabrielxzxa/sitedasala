@@ -1,12 +1,36 @@
-.mobile-rifa {
-    flex-direction: column;
-    /* Adjust image sizing to prevent stretching */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+/* Original CSS styles restored */
+
+header {
+    /* Header styles go here */
 }
 
-/* Original styles retained for desktop and other sections */
-/* Add all other desktop styles here */
-/* Existing styles... */
+.navbar {
+    /* Navbar styles go here */
+}
+
+.hero {
+    /* Hero section styles go here */
+}
+
+button {
+    /* Button styles go here */
+}
+
+footer {
+    /* Footer styles go here */
+}
+
+/* Mobile fixes for .rifa-page */
+@media (max-width: 768px) {
+    .rifa-page .rifas {
+        display: flex;
+        flex-direction: column;
+    }
+    .rifa-page img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures images are properly sized without stretching */
+    }
+}
