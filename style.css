@@ -188,7 +188,7 @@ footer a:hover, footer b:hover {
 /* RESPONSIVO */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column; /* geralmente hero continua vertical */
+        flex-direction: column;
         text-align: center;
         padding: 40px 20px;
         min-height: auto;
@@ -207,15 +207,13 @@ footer a:hover, footer b:hover {
     }
 
     nav {
-        flex-direction: row; /* agora os links ficam lado a lado */
+        flex-direction: column;
         padding: 10px;
-        justify-content: center; /* centraliza os links horizontalmente */
-        gap: 10px; /* espaçamento entre os links */
     }
 
     nav a {
-        display: inline-block; /* cada link fica inline, mas pode ter padding/margin */
-        margin: 0; /* margin agora pode ser controlada pelo gap do flex */
+        display: block;
+        margin: 5px 0;
     }
 
     .imagem img {
@@ -223,15 +221,13 @@ footer a:hover, footer b:hover {
     }
 
     .white-section {
-        flex-direction: row; /* fotos lado a lado no mobile */
-        flex-wrap: wrap; /* se não couber, quebra para a linha de baixo */
-        gap: 10px; /* espaçamento entre as fotos */
+        flex-direction: display; /* fotos uma embaixo da outra no celular */
     }
 }
 
 /* ===== WHITE SECTION / IMAGENS E BOTÃO ===== */
 .rifa-page .main-content {
-    display: row;
+    display: flex;
     flex-direction: flex; /* empilha verticalmente */
     align-items: center;
     justify-content: flex-start;
