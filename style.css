@@ -18,7 +18,7 @@ body {
 
 /* HEADER / NAVBAR */
 nav {
-   background-color: transparent /* cor de fundo do header */
+   background-color: transparent; /* cor de fundo do header */
     position:fixed;
     top: 0;
     width:100%;
@@ -221,14 +221,14 @@ footer a:hover, footer b:hover {
     }
 
     .white-section {
-        flex-direction: column; /* fotos uma embaixo da outra no celular */
+        flex-direction: display; /* fotos uma embaixo da outra no celular */
     }
 }
 
 /* ===== WHITE SECTION / IMAGENS E BOTÃO ===== */
 .rifa-page .main-content {
     display: flex;
-    flex-direction: column; /* empilha verticalmente */
+    flex-direction: flex; /* empilha verticalmente */
     align-items: center;
     justify-content: flex-start;
     padding: 100px 20px 40px; /* topo maior para navbar fixa */
